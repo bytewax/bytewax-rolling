@@ -10,7 +10,12 @@
 
 ## Bytewax Rolling Operator
 
-* TODO: Add project documentation
+The `bytewax.rolling` module contains operators which work on
+**rolling windows**. These are different than normal windows in that
+they represent a long-lived slice of the timeline of a stream relative
+to the current watermark, and items can enter and leave them as time
+flows. This lets you express things like "the last ten minutes of
+items".
 
 ## Setting up the project for development
 
@@ -93,4 +98,3 @@ Activate your development environment and run the development task:
 ## License
 
 Bytewax Rolling Operator is commercially licensed with publicly available source code. Please see the full details in [LICENSE](./LICENSE.md).
-
