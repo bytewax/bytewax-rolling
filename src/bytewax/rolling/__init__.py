@@ -259,7 +259,9 @@ def rolling_delta_stateful_flat_map(
         downstream.
 
     :arg offset: Queue items for this long before having them enter
-        the rolling window. This allows you to
+        the rolling window. This allows you to setup multiple rolling
+        window steps which calculate staggered data e.g. calculate the
+        mean of the last hour of data, and the previous hour of data.
 
     :returns: Rolling result streams.
 
@@ -333,7 +335,9 @@ def rolling_flat_map(
         Returns any items to emit downstream.
 
     :arg offset: Queue items for this long before having them enter
-        the rolling window. This allows you to
+        the rolling window. This allows you to setup multiple rolling
+        window steps which calculate staggered data e.g. calculate the
+        mean of the last hour of data, and the previous hour of data.
 
     :returns: Rolling result streams.
 
