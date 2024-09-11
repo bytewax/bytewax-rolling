@@ -13,6 +13,8 @@ constantly updating mean of the last 10 minutes of data.
 """
 
 import copy
+import os
+import sys
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta
 from typing import Any, Callable, Generic, Iterable, List, Optional, Tuple, Union
@@ -24,6 +26,17 @@ from bytewax._utils import partition
 from bytewax.dataflow import f_repr, operator
 from bytewax.operators import _EMPTY, KeyedStream, S, StatefulBatchLogic, V, W, W_co
 from bytewax.operators.windowing import SC, UTC_MIN, ZERO_TD, Clock, ClockLogic
+
+if "BYTEWAX_LICENSE" not in os.environ:
+    msg = (
+        "`bytewax-interval` is commercially licensed "
+        "with publicly available source code.\n"
+        "You are welcome to prototype using this module for free, "
+        "but any use on business data requires a paid license.\n"
+        "See https://modules.bytewax.io/ for a license. "
+        "Set the env var `BYTEWAX_LICENSE=1` to suppress this message."
+    )
+    print(msg, file=sys.stderr)
 
 
 @dataclass(frozen=True)
