@@ -61,14 +61,14 @@ snowballstemmer==2.2.0
     # via sphinx
 soupsieve==2.6
     # via beautifulsoup4
-sphinx==8.0.2
+sphinx==8.1.0
     # via
     #   -r requirements/doc.in
     #   myst-parser
     #   pydata-sphinx-theme
     #   sphinx-favicon
     #   sphinx-substitution-extensions
-sphinx-autodoc2 @ git+https://github.com/davidselassie/sphinx-autodoc2@a9db7460ca254983c673184f1d7b5db6c1c31e83
+sphinx-autodoc2 @ git+https://github.com/davidselassie/sphinx-autodoc2@namespace-packages
     # via -r requirements/doc.in
 sphinx-favicon==1.0.1
     # via -r requirements/doc.in
